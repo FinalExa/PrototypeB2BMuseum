@@ -14,7 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movementDirection = new Vector3(playerInput.HorizontalX, 0f, playerInput.HorizontalZ);
-        thisRigidbody.velocity = movementDirection.normalized * movementSpeed * SPEEDMULTOFFSET * Time.fixedDeltaTime;
+        if (playerInput.ForwardInput == true) transform.Translate(Vector3.forward * movementSpeed * Time.fixedDeltaTime);
+        if (playerInput.BackInput == true) transform.Translate(Vector3.back * movementSpeed * Time.fixedDeltaTime);
+        if (playerInput.RightInput == true) transform.Translate(Vector3.right * movementSpeed * Time.fixedDeltaTime);
+        if (playerInput.LeftInput == true) transform.Translate(Vector3.left * movementSpeed * Time.fixedDeltaTime);
     }
 }
