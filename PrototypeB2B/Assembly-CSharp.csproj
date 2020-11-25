@@ -620,6 +620,12 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Git/PrototypeB2BMuseum/PrototypeB2B/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/Git/PrototypeB2BMuseum/PrototypeB2B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/Git/PrototypeB2BMuseum/PrototypeB2B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
