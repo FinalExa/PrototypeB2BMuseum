@@ -6,7 +6,8 @@ public class PlayerInput : MonoBehaviour
     public bool BackInput { get; set; }
     public bool LeftInput { get; set; }
     public bool RightInput { get; set; }
-    public bool interactionInput;
+    public bool InteractionInput { get; set; }
+    public bool ExitInput { get; set; }
 
     private void Update()
     {
@@ -18,7 +19,9 @@ public class PlayerInput : MonoBehaviour
         else LeftInput = false;
         if (Input.GetKey(KeyCode.D)) RightInput = true;
         else RightInput = false;
-        if (Input.GetKey(KeyCode.E)) interactionInput = true;
-        else interactionInput = false;
+        if (Input.GetKey(KeyCode.E)) InteractionInput = true;
+        else InteractionInput = false;
+        if (Input.GetKey(KeyCode.Escape)) ExitInput = true;
+        else ExitInput = false;
     }
 }

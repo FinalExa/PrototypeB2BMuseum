@@ -12,7 +12,7 @@ public class ActivateInteraction : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             highlightArea.SetActive(true);
-            if (playerInput.interactionInput == true)
+            if (playerInput.InteractionInput == true)
             {
                 startObserveMode();
             }

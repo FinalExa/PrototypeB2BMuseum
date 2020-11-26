@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 9220708847377221262}
   - component: {fileID: 6393060955602319448}
   - component: {fileID: 1781371889083129186}
+  - component: {fileID: 4464980710069252681}
   m_Layer: 9
   m_Name: Painting
   m_TagString: PaintingTag
@@ -696,13 +697,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8137fc0ec21cf794e99b468ab8e6b781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
   gameObjectsOfThis:
   - {fileID: 2578753964662225588}
   - {fileID: 2578753964436469024}
   - {fileID: 2578753964500889084}
   - {fileID: 0}
   - {fileID: 2234576437122503947}
+  - {fileID: 2234576437122503947}
   border:
   - {fileID: 2578753964522573684}
   camera:
   - {fileID: 2234576437122503947}
+  observeModeOnOff: 0
+--- !u!114 &4464980710069252681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578753964662225588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b86d55627867342970ab6a804b563d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
+  observeMode: {fileID: 1781371889083129186}
+  thisPaintingCamera: {fileID: 2234576437122503947}
+  cameraMovementSpeed: 1
+  cameraRotationSpeed: 1
+  cameraLimit: 0.75

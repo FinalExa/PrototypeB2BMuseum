@@ -2,17 +2,23 @@
 
 public class ObserveMode : MonoBehaviour
 {
+    [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject[] gameObjectsOfThis;
     [SerializeField] private GameObject[] border;
     [SerializeField] private GameObject[] camera;
-    private bool observeModeOnOff;
+    [HideInInspector] public bool observeModeOnOff;
     private GameObject[] allGameObjects;
-
+    private Vector3 cameraStartingPos;
     private void Awake()
     {
         ActivateInteraction.startObserveMode += ObserveModeActivate;
         allGameObjects = FindObjectsOfType<GameObject>();
         observeModeOnOff = false;
+    }
+
+    private void Start()
+    {
+        cameraStartingPos = camera[0].transform.localPosition;
     }
 
     void ObserveModeActivate()
@@ -28,12 +34,13 @@ public class ObserveMode : MonoBehaviour
         GameObjectActivateDeactivateOperation(true, allGameObjects);
         GameObjectActivateDeactivateOperation(true, border);
         GameObjectActivateDeactivateOperation(false, camera);
+        camera[0].transform.localPosition = cameraStartingPos;
         observeModeOnOff = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && observeModeOnOff == true)
+        if (playerInput.ExitInput == true && observeModeOnOff == true)
         {
             ObserveModeDeactivate();
         }
