@@ -64,11 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActivateInteraction.cs" />
+    <Compile Include="Assets\Scripts\CurrentQuestionText.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\MoveCameraInObserveMode.cs" />
     <Compile Include="Assets\Scripts\ObserveMode.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\QuestionAssign.cs" />
+    <Compile Include="Assets\Scripts\QuizCollection.cs" />
+    <Compile Include="Assets\Scripts\QuizContents.cs" />
+    <Compile Include="Assets\Scripts\QuizSceneButtons.cs" />
+    <Compile Include="Assets\Scripts\UIScript.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
