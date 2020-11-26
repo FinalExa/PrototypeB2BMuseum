@@ -7,7 +7,16 @@ public class MoveCameraInObserveMode : MonoBehaviour
     [SerializeField] private GameObject thisPaintingCamera;
     [SerializeField] private float cameraMovementSpeed;
     [SerializeField] private float cameraRotationSpeed;
+    [SerializeField] private float cameraZoomSpeed;
     [SerializeField] private float cameraLimit;
+    [SerializeField] private float cameraZoomLimit;
+    [SerializeField] private float cameraRotationLimit;
+    private float startingZPos;
+
+    private void Start()
+    {
+        startingZPos = thisPaintingCamera.transform.localPosition.z;
+    }
 
     private void FixedUpdate()
     {
@@ -33,24 +42,16 @@ public class MoveCameraInObserveMode : MonoBehaviour
 
     private void CameraRotation()
     {
-
+        Quaternion thisCameraRotation = thisPaintingCamera.transform.localRotation;
+        if (playerInput.LeftArrow == true && thisCameraRotation.y > -cameraRotationLimit) thisPaintingCamera.transform.rotation = Quaternion.Slerp(thisPaintingCamera.transform.rotation, new Quaternion(thisPaintingCamera.transform.rotation.x, thisPaintingCamera.transform.rotation.y - cameraRotationSpeed, thisPaintingCamera.transform.rotation.z, thisPaintingCamera.transform.rotation.w), Time.fixedDeltaTime);
+        if (playerInput.RightArrow == true && thisCameraRotation.y < cameraRotationLimit) thisPaintingCamera.transform.rotation = Quaternion.Slerp(thisPaintingCamera.transform.rotation, new Quaternion(thisPaintingCamera.transform.rotation.x, thisPaintingCamera.transform.rotation.y + cameraRotationSpeed, thisPaintingCamera.transform.rotation.z, thisPaintingCamera.transform.rotation.w), Time.fixedDeltaTime);
+        if (playerInput.UpArrow == true && thisCameraRotation.x > -cameraRotationLimit) thisPaintingCamera.transform.rotation = Quaternion.Slerp(thisPaintingCamera.transform.rotation, new Quaternion(thisPaintingCamera.transform.rotation.x - cameraRotationSpeed, thisPaintingCamera.transform.rotation.y, thisPaintingCamera.transform.rotation.z, thisPaintingCamera.transform.rotation.w), Time.fixedDeltaTime);
+        if (playerInput.DownArrow == true && thisCameraRotation.x < cameraRotationLimit) thisPaintingCamera.transform.rotation = Quaternion.Slerp(thisPaintingCamera.transform.rotation, new Quaternion(thisPaintingCamera.transform.rotation.x + cameraRotationSpeed, thisPaintingCamera.transform.rotation.y, thisPaintingCamera.transform.rotation.z, thisPaintingCamera.transform.rotation.w), Time.fixedDeltaTime);
     }
     private void CameraZoom()
     {
-
-    }
-
-    bool NoInputsActive()
-    {
-        bool noInputStatus;
-        if (playerInput.ForwardInput == false && playerInput.BackInput == false && playerInput.LeftInput == false && playerInput.RightInput == false)
-        {
-            noInputStatus = true;
-        }
-        else
-        {
-            noInputStatus = false;
-        }
-        return noInputStatus;
+        float thisCameraPosZ = thisPaintingCamera.transform.localPosition.z;
+        if (playerInput.PlusInput == true && thisCameraPosZ < startingZPos + cameraZoomLimit) thisPaintingCamera.transform.position += new Vector3(0f, 0f, cameraZoomSpeed * Time.fixedDeltaTime);
+        if (playerInput.MinusInput == true && thisCameraPosZ > startingZPos - cameraZoomLimit) thisPaintingCamera.transform.position += new Vector3(0f, 0f, -cameraZoomSpeed * Time.fixedDeltaTime);
     }
 }

@@ -635,6 +635,10 @@ MonoBehaviour:
   thisPaintingCamera: {fileID: 1938287070}
   cameraMovementSpeed: 0
   cameraRotationSpeed: 0
+  cameraZoomSpeed: 0
+  cameraLimit: 0
+  cameraZoomLimit: 0
+  cameraRotationLimit: 0
 --- !u!114 &861725067 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1781371889083129186, guid: 9f23c895549874847be50321e5179397,
@@ -656,9 +660,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1781371889083129186, guid: 9f23c895549874847be50321e5179397,
         type: 3}
-      propertyPath: gameObjectsOfThis.Array.size
-      value: 6
-      objectReference: {fileID: 0}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1981115790}
     - target: {fileID: 1781371889083129186, guid: 9f23c895549874847be50321e5179397,
         type: 3}
       propertyPath: gameObjectsOfThis.Array.data[3]
@@ -669,11 +673,6 @@ PrefabInstance:
       propertyPath: gameObjectsOfThis.Array.data[5]
       value: 
       objectReference: {fileID: 1981115789}
-    - target: {fileID: 1781371889083129186, guid: 9f23c895549874847be50321e5179397,
-        type: 3}
-      propertyPath: playerInput
-      value: 
-      objectReference: {fileID: 1981115790}
     - target: {fileID: 2578753964662225588, guid: 9f23c895549874847be50321e5179397,
         type: 3}
       propertyPath: m_Name
@@ -739,18 +738,12 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1981115790}
-    - target: {fileID: 6393060955602319448, guid: 9f23c895549874847be50321e5179397,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
     - target: {fileID: 9220708847377221262, guid: 9f23c895549874847be50321e5179397,
         type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1981115790}
-    m_RemovedComponents:
-    - {fileID: 1772297753076128138, guid: 9f23c895549874847be50321e5179397, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f23c895549874847be50321e5179397, type: 3}
 --- !u!1 &1006644313
 GameObject:

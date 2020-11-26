@@ -683,7 +683,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1781371889083129186
 MonoBehaviour:
@@ -704,7 +704,7 @@ MonoBehaviour:
   - {fileID: 2578753964500889084}
   - {fileID: 0}
   - {fileID: 2234576437122503947}
-  - {fileID: 2234576437122503947}
+  - {fileID: 0}
   border:
   - {fileID: 2578753964522573684}
   camera:
@@ -727,4 +727,7 @@ MonoBehaviour:
   thisPaintingCamera: {fileID: 2234576437122503947}
   cameraMovementSpeed: 1
   cameraRotationSpeed: 1
+  cameraZoomSpeed: 1
   cameraLimit: 0.75
+  cameraZoomLimit: 1
+  cameraRotationLimit: 25

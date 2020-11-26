@@ -9,6 +9,7 @@ public class ObserveMode : MonoBehaviour
     [HideInInspector] public bool observeModeOnOff;
     private GameObject[] allGameObjects;
     private Vector3 cameraStartingPos;
+    private Quaternion cameraStartingRotation;
     private void Awake()
     {
         ActivateInteraction.startObserveMode += ObserveModeActivate;
@@ -19,6 +20,7 @@ public class ObserveMode : MonoBehaviour
     private void Start()
     {
         cameraStartingPos = camera[0].transform.localPosition;
+        cameraStartingRotation = camera[0].transform.localRotation;
     }
 
     void ObserveModeActivate()
@@ -35,6 +37,7 @@ public class ObserveMode : MonoBehaviour
         GameObjectActivateDeactivateOperation(true, border);
         GameObjectActivateDeactivateOperation(false, camera);
         camera[0].transform.localPosition = cameraStartingPos;
+        camera[0].transform.localRotation = cameraStartingRotation;
         observeModeOnOff = false;
     }
 
