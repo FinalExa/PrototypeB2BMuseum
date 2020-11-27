@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P)) GoToScene("QuizScene");
         if (Input.GetKeyDown(KeyCode.O)) GoToScene("MemoryScene");
+        if (Input.GetKeyDown(KeyCode.I)) GoToScene("FindTheDifferencesScene");
     }
     public void GoToScene(string sceneName)
     {

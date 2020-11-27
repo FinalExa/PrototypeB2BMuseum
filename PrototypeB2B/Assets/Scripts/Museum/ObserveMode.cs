@@ -4,8 +4,8 @@ public class ObserveMode : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject[] gameObjectsOfThis;
-    [SerializeField] private GameObject[] border;
-    [SerializeField] private GameObject[] camera;
+    [SerializeField] private GameObject border;
+    [SerializeField] private GameObject camera;
     [HideInInspector] public bool observeModeOnOff;
     private GameObject[] allGameObjects;
     private Vector3 cameraStartingPos;
@@ -19,8 +19,8 @@ public class ObserveMode : MonoBehaviour
 
     private void Start()
     {
-        cameraStartingPos = camera[0].transform.localPosition;
-        cameraStartingRotation = camera[0].transform.localRotation;
+        cameraStartingPos = camera.transform.localPosition;
+        cameraStartingRotation = camera.transform.localRotation;
     }
 
     void ObserveModeActivate()
@@ -36,8 +36,8 @@ public class ObserveMode : MonoBehaviour
         GameObjectActivateDeactivateOperation(true, allGameObjects);
         GameObjectActivateDeactivateOperation(true, border);
         GameObjectActivateDeactivateOperation(false, camera);
-        camera[0].transform.localPosition = cameraStartingPos;
-        camera[0].transform.localRotation = cameraStartingRotation;
+        camera.transform.localPosition = cameraStartingPos;
+        camera.transform.localRotation = cameraStartingRotation;
         observeModeOnOff = false;
     }
 
@@ -55,5 +55,9 @@ public class ObserveMode : MonoBehaviour
         {
             arrayToOperate[i].SetActive(onOff);
         }
+    }
+    void GameObjectActivateDeactivateOperation(bool onOff, GameObject gameObjectToOperate)
+    {
+        gameObjectToOperate.SetActive(onOff);
     }
 }

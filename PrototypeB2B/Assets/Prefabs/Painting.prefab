@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 6393060955602319448}
   - component: {fileID: 1781371889083129186}
   - component: {fileID: 4464980710069252681}
+  - component: {fileID: 861725061}
   m_Layer: 9
   m_Name: Painting
   m_TagString: PaintingTag
@@ -717,10 +718,9 @@ MonoBehaviour:
   - {fileID: 2578753964500889084}
   - {fileID: 0}
   - {fileID: 2234576437122503947}
-  border:
-  - {fileID: 2578753964522573684}
-  camera:
-  - {fileID: 2234576437122503947}
+  - {fileID: 0}
+  border: {fileID: 2578753964522573684}
+  camera: {fileID: 2234576437122503947}
   observeModeOnOff: 0
 --- !u!114 &4464980710069252681
 MonoBehaviour:
@@ -743,3 +743,24 @@ MonoBehaviour:
   cameraLimit: 0.75
   cameraZoomLimit: 1
   cameraRotationLimit: 25
+--- !u!114 &861725061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578753964662225588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b86d55627867342970ab6a804b563d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
+  observeMode: {fileID: 1781371889083129186}
+  thisPaintingCamera: {fileID: 2234576437122503947}
+  cameraMovementSpeed: 0
+  cameraRotationSpeed: 0
+  cameraZoomSpeed: 0
+  cameraLimit: 0
+  cameraZoomLimit: 0
+  cameraRotationLimit: 0
