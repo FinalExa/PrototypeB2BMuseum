@@ -3139,7 +3139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   currentTimerSecond: 0
-  maxTimer: 5
+  maxTimer: 30
   endGameButton: {fileID: 2023209726}
   endGameButtonText: {fileID: 864063312}
   victoryMessage: You win!
