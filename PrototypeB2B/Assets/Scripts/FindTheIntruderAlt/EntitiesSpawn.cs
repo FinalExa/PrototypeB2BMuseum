@@ -40,7 +40,7 @@ public class EntitiesSpawn : MonoBehaviour
         roundNumber++;
         DestroyPreviousRound();
         if (roundNumber < roundLimit) RoundGeneration();
-        else print("Victory!");
+        else validateTheIntruder.WinTheGame();
     }
 
     void RoundInitialization()

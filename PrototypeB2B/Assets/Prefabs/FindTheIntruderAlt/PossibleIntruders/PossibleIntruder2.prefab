@@ -143,4 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0f019f4f95837498eb447a0a4eb1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentName: Intruder
   isIntruder: 0

@@ -3,29 +3,21 @@ using UnityEngine;
 
 public class PossibleIntruder : MonoBehaviour
 {
+    [SerializeField] private string parentName;
     public bool isIntruder;
     public static Action intruderFound;
+    public static Action innocentFound;
 
-    private void Awake()
+    private void OnEnable()
     {
-        ValidateTheIntruder.intruderSet += SetIntruder;
+        if (this.transform.parent.gameObject.name == parentName) ValidateTheIntruder.intruderSet += SetIntruder;
         isIntruder = false;
-    }
-
-    private void Start()
-    {
     }
 
     public void CheckIfIsIntruder()
     {
-        if (isIntruder == true)
-        {
-            intruderFound();
-        }
-        else
-        {
-            print("Innocent!");
-        }
+        if (isIntruder == true) intruderFound();
+        else innocentFound();
     }
 
     void SetIntruder()
