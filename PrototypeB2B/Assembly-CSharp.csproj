@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\FindTheDifferences\DifferencesGame.cs" />
     <Compile Include="Assets\Scripts\FindTheDifferences\TimerUI.cs" />
     <Compile Include="Assets\Scripts\FindTheIntruderAlt\EntitiesSpawn.cs" />
+    <Compile Include="Assets\Scripts\FindTheIntruderAlt\PossibleIntruder.cs" />
+    <Compile Include="Assets\Scripts\FindTheIntruderAlt\ValidateTheIntruder.cs" />
     <Compile Include="Assets\Scripts\Memory\CardCover.cs" />
     <Compile Include="Assets\Scripts\Memory\CardsSetup.cs" />
     <Compile Include="Assets\Scripts\Memory\MemoryGame.cs" />

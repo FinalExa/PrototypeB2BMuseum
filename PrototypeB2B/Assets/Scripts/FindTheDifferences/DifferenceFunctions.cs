@@ -12,10 +12,10 @@ public class DifferenceFunctions : MonoBehaviour
     public void DifferenceFound()
     {
         differencesGame.score++;
-        leftSideButton?.SetActive(false);
-        rightSideButton?.SetActive(false);
-        leftSideImage?.SetActive(true);
-        rightSideImage?.SetActive(true);
+        leftSideButton.SetActive(false);
+        rightSideButton.SetActive(false);
+        leftSideImage.SetActive(true);
+        rightSideImage.SetActive(true);
         differencesGame.CheckForVictory();
     }
 }

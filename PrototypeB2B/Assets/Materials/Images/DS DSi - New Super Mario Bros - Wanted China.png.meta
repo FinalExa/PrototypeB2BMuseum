@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: e7864b8ca0ec1244fb6f556c9362fc93
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9015428802428324607
+    second: DS DSi - New Super Mario Bros - Wanted China_0
+  - first:
+      213: 1912843599164773725
+    second: DS DSi - New Super Mario Bros - Wanted China_1
+  - first:
+      213: 7136055489155234640
+    second: DS DSi - New Super Mario Bros - Wanted China_2
+  - first:
+      213: -6480703017160990148
+    second: DS DSi - New Super Mario Bros - Wanted China_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,11 +97,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - New Super Mario Bros - Wanted China_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1053f6d1543c2e280800000000000000
+      internalID: -9015428802428324607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - New Super Mario Bros - Wanted China_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 3
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5598176e19cb8a10800000000000000
+      internalID: 1912843599164773725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - New Super Mario Bros - Wanted China_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bf290b8ac580360800000000000000
+      internalID: 7136055489155234640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - New Super Mario Bros - Wanted China_3
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 2
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32215f21faef06a0800000000000000
+      internalID: -6480703017160990148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: bfed65f5a6d7c9c4083dafb85e35549c
     internalID: 0
     vertices: []
     indices: 
