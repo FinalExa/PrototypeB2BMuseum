@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/FindTheDifferencesScene.unity
     guid: d85b35c23cac086428d499111210d28b
   - enabled: 1
-    path: Assets/Scenes/FindTheIntruderScene.unity
-    guid: d009b6c4917141445965d4016b9d3a02
+    path: Assets/Scenes/Bruh.unity
+    guid: 9db511c34bbde1c468e27dbade64d99f
   - enabled: 1
     path: Assets/Scenes/FindTheIntruderAltScene.unity
     guid: 621bc85d1d3b0cb42bc6c10102d2fd3f
